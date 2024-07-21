@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## v2.0.1 (2024-07-21)
+
+### Fix
+
+* fix: required arg in publish-image file to build the image ([`0679503`](https://github.com/alessadelisio/gokei-golden-gate-website/commit/0679503bcef801ad6f39a1e9c87198b9ca2599f6))
+
+### Unknown
+
+* Merge pull request #10 from alessadelisio/develop
+
+Develop ([`7dcb099`](https://github.com/alessadelisio/gokei-golden-gate-website/commit/7dcb099b476de190f9edcad782b830325c3f8fdd))
+
+* Merge pull request #9 from alessadelisio/feature/unsplash-api
+
+fix: required arg in publish-image file to build the image ([`0f38751`](https://github.com/alessadelisio/gokei-golden-gate-website/commit/0f38751a8705651ea1e26bf09f59a63077cb2de1))
+
 ## v2.0.0 (2024-07-21)
 
 ### Breaking
