@@ -149,11 +149,11 @@ jobs:
       - name: "Publish image"
         id: publish
         run: |
-          echo "Publishing image..."
-          echo "Image published successfully."
+          gcloud auth configure-docker ${{ env.REGION }}-${{ env.REGISTRY_FORMAT }}
+          ./scripts/publish_image
 
       - name: "Deploy image"
         id: deploy
         run: |
-          echo "Deploying image..."
-          echo "Image deployed successfully."
+          gcloud config set run/region ${{ env.REGION }}
+          ./scripts/deploy_image

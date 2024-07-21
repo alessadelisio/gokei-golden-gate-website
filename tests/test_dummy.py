@@ -1,8 +1,12 @@
-# pylint: disable=C0114, C0115, C0116
 def dummy_func(x):
-    return x**2
+    """Compute the square of x."""
+    return x ** 2
 
 
-class TestDummy: # pylint: disable=R0903
+class TestDummy:
+    """Test suite for dummy_func."""
+
     def test_dummy(self):
-        assert dummy_func(7) == 49
+        """Test if dummy_func correctly computes the square of a number."""
+        expected_result = 49  # Replace magic value with a named constant
+        assert dummy_func(7) == expected_result

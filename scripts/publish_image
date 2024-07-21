@@ -1,0 +1,9 @@
+#!/bin/bash -e
+
+IMAGE_NAME="${REGION}-${REGISTRY_FORMAT}/${GCP_PROJECT}/${GCP_ARTIFACT_REPOSITORY}/${GCP_APPLICATION}"
+
+
+gcloud config set project $GCP_PROJECT
+
+docker build -t $IMAGE_NAME .
+docker push $IMAGE_NAME
