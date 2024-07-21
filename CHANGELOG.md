@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## v1.1.0 (2024-07-21)
+
+### Feature
+
+* feat: add missing Dockerfile ([`5a88e44`](https://github.com/alessadelisio/gokei-golden-gate-website/commit/5a88e443aac979e1ba2c07cc587f5162fecaf078))
+
+### Unknown
+
+* Merge pull request #6 from alessadelisio/develop
+
+Develop ([`d837468`](https://github.com/alessadelisio/gokei-golden-gate-website/commit/d8374682256a88b325ec821e61c75c846065197a))
+
+* Merge pull request #5 from alessadelisio/feature/first-config
+
+feat: add missing Dockerfile ([`dc0690a`](https://github.com/alessadelisio/gokei-golden-gate-website/commit/dc0690a1c87bfdc974f7065db84913671d1a6306))
+
 ## v1.0.0 (2024-07-21)
 
 ### Breaking
