@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## v2.0.0 (2024-07-21)
+
+### Breaking
+
+* feat: Website&#39;s second version consumming API
+
+BREAKING CHANGE: Parte 2: Textos e Imágenes ([`f1c5e9b`](https://github.com/alessadelisio/gokei-golden-gate-website/commit/f1c5e9b4908b99bc9f1759df461c580b23e9bfce))
+
+### Unknown
+
+* Merge pull request #8 from alessadelisio/develop
+
+Develop ([`89e699b`](https://github.com/alessadelisio/gokei-golden-gate-website/commit/89e699b5f0c490b08908d36ed6914d425047d3f0))
+
+* Merge pull request #7 from alessadelisio/feature/unsplash-api
+
+Feature/unsplash api ([`8e3bf2e`](https://github.com/alessadelisio/gokei-golden-gate-website/commit/8e3bf2e6298557615b5dbfc166ba5dd9bf620cbc))
+
 ## v1.1.0 (2024-07-21)
 
 ### Feature
