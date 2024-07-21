@@ -1,11 +1,21 @@
-/**
- * This script is used to initialize a 'masonry' grid layout.
- */
+import { loadImages } from './imageLoader.js';
+import { createImageElement } from './imageElementCreator.js';
 
 document.addEventListener('DOMContentLoaded', function () {
-    let grid = document.querySelector('.gokei-grid');
-    let items = grid.querySelectorAll('.grid-item');
+    const grid = document.querySelector('.gokei-grid');
 
+    loadImages()
+        .then(images => {
+            images.forEach(imageData => {
+                const gridItem = createImageElement(imageData);
+                grid.appendChild(gridItem);
+            });
+
+            initializeMasonry(grid);
+        });
+});
+
+function initializeMasonry(grid) {
     imagesLoaded(grid, function () {
         let masonry = new Masonry(grid, {
             itemSelector: '.grid-item',
@@ -15,9 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         setTimeout(function () {
             grid.classList.add('loaded');
-            items.forEach(function (item) {
+            grid.querySelectorAll('.grid-item').forEach(function (item) {
                 item.classList.add('loaded');
             });
         }, 100);
     });
-});
+}

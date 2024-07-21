@@ -41,9 +41,14 @@ lint:         ## Check code smells with Ruff
 	@pipenv run ruff check --exit-zero --output-format text .
 
 
-.PHONY: Run
+.PHONY: run
 run:          ## Run uvicorn
-	APP_ENVIRONMENT=local gunicorn --workers=1 --bind=0.0.0.0:8080 --log-level DEBUG --threads 8 --timeout 0 src.app:app --reload
+	@if [ -f .env ]; then \
+		export $$(cat .env | xargs) && \
+		APP_ENVIRONMENT=local gunicorn --workers=1 --bind=0.0.0.0:8080 --log-level DEBUG --threads 8 --timeout 0 src.app:app --reload; \
+	else \
+		APP_ENVIRONMENT=local gunicorn --workers=1 --bind=0.0.0.0:8080 --log-level DEBUG --threads 8 --timeout 0 src.app:app --reload; \
+	fi
 
 
 .PHONY: test
