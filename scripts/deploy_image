@@ -1,0 +1,14 @@
+#!/bin/bash -e
+
+IMAGE_NAME="${REGION}-${REGISTRY_FORMAT}/${GCP_PROJECT}/${GCP_ARTIFACT_REPOSITORY}/${GCP_APPLICATION}"
+
+
+CLOUDRUN_URL_OUTPUT_PATH=$(
+    gcloud run deploy gokei-golden-gate-website \
+    --image $IMAGE_NAME \
+    --allow-unauthenticated \
+    --memory 512M \
+    --format='value(status.url)'
+)
+
+echo "CLOUDRUN_URL_OUTPUT_PATH=$CLOUDRUN_URL_OUTPUT_PATH" >> "$GITHUB_OUTPUT"

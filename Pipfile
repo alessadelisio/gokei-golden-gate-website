@@ -1,12 +1,13 @@
 [[source]]
 url = "https://pypi.org/simple"
 verify_ssl = true
-name = "pip_conf_index_global"
+name = "pypi"
 
 [packages]
 flask = "==3.0.1"
 flask-vite = "==0.3.7"
 gunicorn = "==21.2.0"
+pillow = "==10.4.0"
 python-semantic-release = "*"
 
 [dev-packages]
