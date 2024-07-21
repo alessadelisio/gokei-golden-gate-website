@@ -72,6 +72,43 @@
                         margin-left: 10px;
                         white-space: nowrap;
                     }
+
+                    .author-info {
+                        display: flex;
+                        align-items: center;
+    
+                        .author-image {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            margin-right: 10px;
+                        }
+    
+                        .author-text-info {
+                            display: flex;
+                            flex-direction: column;
+    
+                            .author-name {
+                                color: #ffffff;
+                                font-size: 1rem;
+                                font-weight: bold;
+                            }
+    
+                            .author-twitter {
+                                color: #ffffff;
+                                font-size: 0.8rem;
+
+                                a {
+                                    color: #ffffff;
+                                    text-decoration: none;
+
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
 
@@ -126,6 +163,11 @@
             margin-bottom: 0; // Remove this margin as grid-gap handles spacing
         }
     }
+}
+
+.gokei-grid,
+.grid-item {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 // Loaded option to display the grid once the images are successfully loaded

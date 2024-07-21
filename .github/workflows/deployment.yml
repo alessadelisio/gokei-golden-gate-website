@@ -135,6 +135,7 @@ jobs:
       GCP_PROJECT: ${{ vars.GCP_PROJECT }}
       REGION: ${{ vars.REGION }}
       REGISTRY_FORMAT: ${{ vars.REGISTRY_FORMAT }}
+      UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
 
     steps:
       - name: "Checkout code"
