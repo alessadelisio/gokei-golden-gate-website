@@ -5,5 +5,5 @@ IMAGE_NAME="${REGION}-${REGISTRY_FORMAT}/${GCP_PROJECT}/${GCP_ARTIFACT_REPOSITOR
 
 gcloud config set project $GCP_PROJECT
 
-docker build -t $IMAGE_NAME .
+docker build --build-arg UNSPLASH_ACCESS_KEY="${UNSPLASH_ACCESS_KEY}" -t $IMAGE_NAME .
 docker push $IMAGE_NAME
