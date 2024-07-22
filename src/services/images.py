@@ -5,7 +5,7 @@ import requests
 from src.config import UNSPLASH_ACCESS_KEY, UNSPLASH_API_URL, logger
 
 
-def fetch_images() -> list[dict[str, Any]]:
+def fetch_images(page: int = 1, per_page: int = 30) -> list[dict[str, Any]]:
     """This function fetches images from the Golden Gate bridge in the Unsplash
     API, by sending a request, processing the response, and returning a list of
     dictionaries containing image details.
@@ -22,7 +22,8 @@ def fetch_images() -> list[dict[str, Any]]:
 
     params = {
         "query": "Golden Gate Bridge",
-        "per_page": 20,
+        "page": page,
+        "per_page": per_page,
         "client_id": UNSPLASH_ACCESS_KEY,
     }
 

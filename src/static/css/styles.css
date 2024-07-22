@@ -11,6 +11,13 @@
   flex-direction: column;
   transition: opacity 0.3s ease, visibility 0.3s ease;
   visibility: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.gokei-grid .grid-item.loaded {
+  opacity: 1;
+  transform: translateY(0);
 }
 .gokei-grid .grid-item .image-container {
   margin-top: 30px;
@@ -147,6 +154,29 @@
 .grid-item.loaded {
   opacity: 1;
   visibility: visible;
+}
+
+#load-more-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+#load-more-button:hover {
+  background-color: #0056b3;
+}
+#load-more-button:focus {
+  outline: none;
+}
+#load-more-button.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 @media (max-width: 1024px) {
