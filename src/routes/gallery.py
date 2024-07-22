@@ -1,6 +1,6 @@
 from typing import Union
 
-from flask import Blueprint, jsonify, render_template
+from flask import Blueprint, jsonify, render_template, request
 
 from src.services.images import fetch_images
 
@@ -26,7 +26,10 @@ def get_images() -> Union[str, tuple[str, int]]:
     or a tuple of an error message and status code if an error occurs."""
 
     try:
-        images = fetch_images()
+        page = request.args.get('page', 1, type=int)
+        per_page = request.args.get('per_page', 30, type=int)
+        images = fetch_images(page=page, per_page=per_page)
+
         return jsonify(images)
 
     except Exception as error:
