@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## v3.0.0 (2024-07-22)
+
+### Breaking
+
+* feat: adding endless scrolling funtionality to the website
+
+BREAKING CHANGE: Parte 3: Scrolling ([`d0cfc5f`](https://github.com/alessadelisio/gokei-golden-gate-website/commit/d0cfc5f7c9346314d96f9b5375ba21b9ad0f0eab))
+
+### Unknown
+
+* Merge pull request #11 from alessadelisio/feature/scrolling
+
+feat: adding endless scrolling funtionality to the website ([`d9e30d2`](https://github.com/alessadelisio/gokei-golden-gate-website/commit/d9e30d2ca38f7dfa00782caf14904f6e6aeb3e88))
+
 ## v2.0.1 (2024-07-21)
 
 ### Fix
